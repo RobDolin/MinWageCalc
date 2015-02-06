@@ -41,22 +41,22 @@
         dvUserInputs.innerHTML += "&nbsp; " + slcEmployerSize.value + " <br />";
 
         // Calculate minimum wage
-        var fpDietFactor = 0;
+        var SelectedMinWageSchedule;
         switch (slcEmployerSize.value) {
             case "A":
-                fpDietFactor = fpMidMeatEaterKgCO2PerDay;
+                SelectedMinWageSchedule = MinWageScheduleA;
                 break;
             case "B":
-                fpDietFactor = fpFishEaterKgCO2PerDay;
+                SelectedMinWageSchedule = MinWageScheduleB;
                 break;
             case "C":
-                fpDietFactor = fpVegetarianEaterKgCO2PerDay;
+                SelectedMinWageSchedule = MinWageScheduleC;
                 break;
             case "D":
-                fpDietFactor = fpVeganEaterKgCO2PerDay;
+                SelectedMinWageSchedule = MinWageScheduleD;
                 break;
         }
-        // alert(fpDietFactor.toString());
+        alert(SelectedMinWageSchedule[1].toString());
         var fpDietEmissions = iNumPeople * 365 * fpDietFactor / 1000;  // Multiply by 365 and divide by 1000 b/c factor is _Kg_CO2 per person per day
         // alert("Diet-related emissions: " + fpDietEmissions.toString());
 
