@@ -15,53 +15,44 @@
       function Calculate() {
 
         // Constants
+        // The below arrays hold the minimum wage values
+        // Array position 0 = 2014 and early 2015
+        // Array position 1 = April 2015
+        // Array position 2 = 2016, position 3 = 2017, ...
+        // A = Schedule 1 employers (more than 500 employees in the U.S.)
+        // B = Schedule 1 employers (more than 500 emp1loyees in the U.S.) with medical benefits
+        // C = Schedule 2 employers (500 or fewer employees in the U.S.) with minimum compensation
+        // D = Schedule 2 employers (500 or fewer employees in the U.S.)
+        var MinWageScheduleA = [ 9.32, 11.0, 13.0, 15.0 ];
+        var MinWageScheduleB = [ 9.32, 11.0, 12.5, 13.5, 15.0 ];
+        var MinWageScheduleC = [ 9.32, 11,0, 12.0, 13.0, 14.0, 15.0  ];
+        var MinWageScheduleD = [ 9.32, 10.0, 10.5, 11.0, 11.5, 12.0, 13.5, 15.0 ];
         
 
         // Initialize variables
         var iNumPeople = 0;
-        var iNumCars = 0;
-        var iNumFlights = 0;
-        var iNumHomeSqFt = 0;
 
         // Set variable values (as values not strings)
         iNumPeople = txtNumPeople.value * 1;
-        iNumCars = txtNumCars.value * 1;
-        iNumFlights = txtNumFlights.value * 1;
-        iNumHomeSqFt = txtNumHomeSqFt.value * 1;
 
         // Display user inputs
         dvUserInputs.innerHTML = "Your  information: <br /> ";
         dvUserInputs.innerHTML += "&nbsp; " + iNumPeople.toString() + " people<br />";
-        dvUserInputs.innerHTML += "&nbsp; " + iNumCars.toString() + " car(s)<br />";
-        dvUserInputs.innerHTML += "&nbsp; " + iNumFlights.toString() + " flight(s) per person per year<br />";
-        dvUserInputs.innerHTML += "&nbsp; " + iNumHomeSqFt.toString() + " sq. ft. in home<br />";
         dvUserInputs.innerHTML += "&nbsp; " + slcEmployerSize.value + " diet<br />";
 
-        // Calculate car emissions
-        var fpCarEmissions = iNumCars * iCarMilesPerYear * fpTonsCO2PerGallonForPersonalCar / fpAverageMilesPerGallonForPersonalCar;
-        // alert("Car emissions: " + fpCarEmissions.toString() );
-
-        // Calculate flight emissions
-        var fpFlightEmissions = iNumFlights * iNumPeople * fpHoursPerFlight * fpTonsCO2PerPersonPerFlightPerHour;
-        // alert("Flight emissions: " + fpFlightEmissions.toString() );
-
-        // Calculate home energy emissions
-        var fpHomeEnergyEmissions = iNumHomeSqFt * fpTonsCO2HomeEnergyPerAverageHousehold / iAverageHomeSqFt;
-        // alert("Home energy emissions: " + fpHomeEnergyEmissions.toString());
-
-        // Calculate diet emissions
+        // Calculate minimum wage
         var fpDietFactor = 0;
         switch (slcEmployerSize.value) {
-            case "Meat":
+            case "A":
                 fpDietFactor = fpMidMeatEaterKgCO2PerDay;
                 break;
-            case "Fish":
+            case "B":
                 fpDietFactor = fpFishEaterKgCO2PerDay;
                 break;
-            case "Veggie":
+            case "C":
                 fpDietFactor = fpVegetarianEaterKgCO2PerDay;
                 break;
-            case "Vegan":
+            case "D":
                 fpDietFactor = fpVeganEaterKgCO2PerDay;
                 break;
         }
