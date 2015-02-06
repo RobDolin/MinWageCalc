@@ -38,7 +38,7 @@
         // Display user inputs
         dvUserInputs.innerHTML = "Your  information: <br /> ";
         dvUserInputs.innerHTML += "&nbsp; " + iNumPeople.toString() + " people<br />";
-        dvUserInputs.innerHTML += "&nbsp; " + slcEmployerSize.value + " diet<br />";
+        dvUserInputs.innerHTML += "&nbsp; " + slcEmployerSize.value + " <br />";
 
         // Calculate minimum wage
         var fpDietFactor = 0;
@@ -88,9 +88,10 @@
     <p>
       How many people are at your employer?<br />
       <select id="slcEmployerSize">
-        <option value="Smaller">Less than 500 employees</option>
-        <option value="Franchise">Part of franchise</option>
-        <option value="Larger">More than 500 employees</option>
+        <option value="A">More than 500 employees in the U.S.</option>
+        <option value="B">More than 500 emp1loyees in the U.S. AND provides medical benefits</option>
+        <option value="C">500 or fewer employees in the U.S. AND employer provides minimum compensation</option>
+        <option value="D">500 or fewer employees in the U.S.</option>
       </select>
     </p>
     <p>
