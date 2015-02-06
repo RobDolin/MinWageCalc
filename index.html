@@ -82,14 +82,15 @@
     <h1>Minimum Wage Calculator</h1>
 
     <p>
-      How large is your home? (in square feet) <br />
-      <input type="number" name="txtNumHomeSqFt" min="0" max="10000" step="1" value="1800" />
+      A) How many people work at your employer across the USA?<br />
+      <input type="number" name="txtNumPeople" min="0" max="10000000" step="1" value="20" />
     </p>
+    <p>OR</p>
     <p>
-      How many people are at your employer?<br />
+      B) Select the size of your employer <br />
       <select id="slcEmployerSize">
         <option value="A">More than 500 employees in the U.S.</option>
-        <option value="B">More than 500 emp1loyees in the U.S. AND provides medical benefits</option>
+        <option value="B">More than 500 emp1loyees in the U.S. AND provides medical benefits to YOU</option>
         <option value="C">500 or fewer employees in the U.S. AND employer provides minimum compensation</option>
         <option value="D">500 or fewer employees in the U.S.</option>
       </select>
