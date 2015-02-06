@@ -24,11 +24,10 @@
         // C = Schedule 2 employers (500 or fewer employees in the U.S.) with minimum compensation
         // D = Schedule 2 employers (500 or fewer employees in the U.S.)
         var MinWageScheduleA = [ 9.54, 11.0, 13.0, 15.0 ];
-        var MinWageScheduleB = [ 9.32, 11.0, 12.5, 13.5, 15.0 ];
-        var MinWageScheduleC = [ 9.32, 11,0, 12.0, 13.0, 14.0, 15.0  ];
-        var MinWageScheduleD = [ 9.32, 10.0, 10.5, 11.0, 11.5, 12.0, 13.5, 15.0 ];
+        var MinWageScheduleB = [ 9.54, 11.0, 12.5, 13.5, 15.0 ];
+        var MinWageScheduleC = [ 9.54, 11,0, 12.0, 13.0, 14.0, 15.0  ];
+        var MinWageScheduleD = [ 9.54, 10.0, 10.5, 11.0, 11.5, 12.0, 13.5, 15.0 ];
         
-
         // Initialize variables
         var iNumPeople = 0;
 
@@ -56,7 +55,8 @@
                 SelectedMinWageSchedule = MinWageScheduleD;
                 break;
         }
-        alert(SelectedMinWageSchedule[1].toString());
+        alert("The minimum wage now is: $" + SelectedMinWageSchedule[0].toString() );
+        alert("The minimum wage on April 1, 2015 will be: $" +SelectedMinWageSchedule[1].toString() );
         var fpDietEmissions = iNumPeople * 365 * fpDietFactor / 1000;  // Multiply by 365 and divide by 1000 b/c factor is _Kg_CO2 per person per day
         // alert("Diet-related emissions: " + fpDietEmissions.toString());
 
