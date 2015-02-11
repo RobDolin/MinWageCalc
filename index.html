@@ -36,7 +36,7 @@
 
         // Display user inputs
         dvUserInputs.innerHTML = "Your  information: <br /> ";
-        dvUserInputs.innerHTML += "&nbsp; " + iNumPeople.toString() + " people at your employer across the USA<br />";
+        // dvUserInputs.innerHTML += "&nbsp; " + iNumPeople.toString() + " people at your employer across the USA<br />";
         dvUserInputs.innerHTML += "&nbsp; Your employer is in category: " + slcEmployerSize.value + " <br />";
 
         // Calculate minimum wage
@@ -68,10 +68,6 @@
         //alert("The minimum wage now is: $" + SelectedMinWageSchedule[0].toString() );
         // alert("The minimum wage on April 1, 2015 will be: $" +SelectedMinWageSchedule[1].toString() );
 
-        // Calculate total
-        var fpTotalEmissions = fpCarEmissions + fpFlightEmissions + fpHomeEnergyEmissions + fpDietEmissions;
-        // alert("Total emissions: " + fpTotalEmissions.toString());
-
         // Change button text from "Calculcate" to "Recalculate" after first calculation
         btnSubmit.value = "Recalculate";
 
@@ -85,12 +81,16 @@
     <h1>Minimum Wage Calculator</h1>
 
     <p>
-      A) How many people work at your employer across the USA?<br />
+<!--
+      A) 
+      How many people work at your employer across the USA?<br />
       <input type="number" name="txtNumPeople" min="0" max="10000000" step="1" value="20" />
     </p>
     <p>OR</p>
     <p>
-      B) Select the size of your employer <br />
+      B) 
+-->
+      Select the size of your employer <br />
       <select id="slcEmployerSize">
         <option value="A">A: More than 500 employees in the U.S.</option>
         <option value="B">B: More than 500 employees in the U.S. AND provides medical benefits to YOU</option>
