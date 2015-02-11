@@ -60,8 +60,8 @@
         dvOutput.innerHTML += "Upcoming increases: <br />";
         dvOutput.innerHTML += "April 1, 2015: $" + SelectedMinWageSchedule[1].toFixed(2) + "<br />";
         // alert( SelectedMinWageSchedule.length );
-        for (iYearsFrom2014 = 2; iYearsFrom2014 < SelectedMinWageSchedule.length; iYearsFrom2014++) {
-          dvOutput.innerHTML += "January 1, " + 2014+iYearsFrom2014 + ": $" + SelectedMinWageSchedule[iYearsFrom2014].toFixed(2) + "<br />";
+        for (iYearIterator = 2016; iYearIterator - 2014 < SelectedMinWageSchedule.length; iYearIterator++) {
+          dvOutput.innerHTML += "January 1, " + iYearIterator + ": $" + SelectedMinWageSchedule[ iYearIterator - 2014 ].toFixed(2) + "<br />";
         }
         // NOTE: toPrecision() is # of significant figures; toFixed() is # of fixed decimal places
 
