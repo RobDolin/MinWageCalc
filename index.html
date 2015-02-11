@@ -37,7 +37,7 @@
         // Display user inputs
         dvUserInputs.innerHTML = "Your  information: <br /> ";
         dvUserInputs.innerHTML += "&nbsp; " + iNumPeople.toString() + " people at your employer across the USA<br />";
-        dvUserInputs.innerHTML += "&nbsp; " + slcEmployerSize.selected.text + " <br />";
+        dvUserInputs.innerHTML += "&nbsp; Your employer is in category: " + slcEmployerSize.value + " <br />";
 
         // Calculate minimum wage
         var SelectedMinWageSchedule;
@@ -91,10 +91,10 @@
     <p>
       B) Select the size of your employer <br />
       <select id="slcEmployerSize">
-        <option value="A">More than 500 employees in the U.S.</option>
-        <option value="B">More than 500 employees in the U.S. AND provides medical benefits to YOU</option>
-        <option value="C">500 or fewer employees in the U.S. AND employer provides minimum compensation</option>
-        <option value="D">500 or fewer employees in the U.S.</option>
+        <option value="A">A: More than 500 employees in the U.S.</option>
+        <option value="B">B: More than 500 employees in the U.S. AND provides medical benefits to YOU</option>
+        <option value="C">C: 500 or fewer employees in the U.S. AND employer provides minimum compensation</option>
+        <option value="D">D: 500 or fewer employees in the U.S.</option>
       </select>
     </p>
     <p>
