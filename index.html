@@ -55,19 +55,18 @@
                 SelectedMinWageSchedule = MinWageScheduleD;
                 break;
         }
-        alert("The minimum wage now is: $" + SelectedMinWageSchedule[0].toString() );
-        alert("The minimum wage on April 1, 2015 will be: $" +SelectedMinWageSchedule[1].toString() );
-        var fpDietEmissions = iNumPeople * 365 * fpDietFactor / 1000;  // Multiply by 365 and divide by 1000 b/c factor is _Kg_CO2 per person per day
-        // alert("Diet-related emissions: " + fpDietEmissions.toString());
+        // Display emissions
+        dvOutput.innerHTML = "The minimum wage now is: $" + SelectedMinWageSchedule[0].toFixed(2) + "<br />";
+        dvOutput.innerHTML += "Upcoming increases: <br />";
+        dvOutput.innerHTML += "April 1, 2015: $" + SelectedMinWageSchedule[1].toFixed(2) + "<br />";
+        // NOTE: toPrecision() is # of significant figures; toFixed() is # of fixed decimal places
+
+        //alert("The minimum wage now is: $" + SelectedMinWageSchedule[0].toString() );
+        // alert("The minimum wage on April 1, 2015 will be: $" +SelectedMinWageSchedule[1].toString() );
 
         // Calculate total
         var fpTotalEmissions = fpCarEmissions + fpFlightEmissions + fpHomeEnergyEmissions + fpDietEmissions;
         // alert("Total emissions: " + fpTotalEmissions.toString());
-
-        // Display emissions
-        dvOutput.innerHTML = "Your estimated household carbon emissions (metric tons per year):<br />";
-        dvOutput.innerHTML += "&nbsp; " + fpCarEmissions.toFixed(1) + " from car(s)<br />";
-        // NOTE: toPrecision() is # of significant figures; toFixed() is # of fixed decimal places
 
         // Change button text from "Calculcate" to "Recalculate" after first calculation
         btnSubmit.value = "Recalculate";
