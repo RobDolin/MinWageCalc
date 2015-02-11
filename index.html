@@ -55,10 +55,11 @@
                 SelectedMinWageSchedule = MinWageScheduleD;
                 break;
         }
-        // Display emissions
+        // Display output
         dvOutput.innerHTML = "The minimum wage now is: $" + SelectedMinWageSchedule[0].toFixed(2) + "<br />";
         dvOutput.innerHTML += "Upcoming increases: <br />";
         dvOutput.innerHTML += "April 1, 2015: $" + SelectedMinWageSchedule[1].toFixed(2) + "<br />";
+        alert( SelectedMinWagesSchedule.length );
         for (iYearsFromNow = 2; iYearsFromNow < SelectedMinWagesSchedule.length; iYearsFromNow++) {
           alert (iYearsFromNow);
         }
