@@ -59,20 +59,20 @@ var WageService = function() {
     var wageSchedules = {
       "A": [
         {"wage": 9.54, "time_range": moment("2014-01-01").twix("2015-03-31", {allDay: true})},
-        {"wage": 11.0, "time_range": moment("2015-03-31").twix("2015-12-31", {allDay: true})},
+        {"wage": 11.0, "time_range": moment("2015-04-01").twix("2015-12-31", {allDay: true})},
         {"wage": 13.0, "time_range": moment("2016-01-01").twix("2016-12-31", {allDay: true})},
         {"wage": 15.0, "time_range": moment("2017-01-01").twix("2117-12-31", {allDay: true})}
       ],
       "B": [
         {"wage": 9.54, "time_range": moment("2014-01-01").twix("2015-03-31", {allDay: true})},
-        {"wage": 11.0, "time_range": moment("2015-03-31").twix("2015-12-31", {allDay: true})},
+        {"wage": 11.0, "time_range": moment("2015-04-01").twix("2015-12-31", {allDay: true})},
         {"wage": 12.5, "time_range": moment("2016-01-01").twix("2016-12-31", {allDay: true})},
         {"wage": 13.5, "time_range": moment("2017-01-01").twix("2017-12-31", {allDay: true})},
         {"wage": 15.0, "time_range": moment("2018-01-01").twix("2118-12-31", {allDay: true})}
       ],
       "C": [
         {"wage": 9.54, "time_range": moment("2014-01-01").twix("2015-03-31", {allDay: true})},
-        {"wage": 11.0, "time_range": moment("2015-03-31").twix("2015-12-31", {allDay: true})},
+        {"wage": 11.0, "time_range": moment("2015-04-01").twix("2015-12-31", {allDay: true})},
         {"wage": 12.0, "time_range": moment("2016-01-01").twix("2016-12-31", {allDay: true})},
         {"wage": 13.0, "time_range": moment("2017-01-01").twix("2017-12-31", {allDay: true})},
         {"wage": 14.0, "time_range": moment("2018-01-01").twix("2018-12-31", {allDay: true})},
@@ -80,7 +80,7 @@ var WageService = function() {
       ],
       "D": [
         {"wage": 9.54, "time_range": moment("2014-01-01").twix("2015-03-31", {allDay: true})},
-        {"wage": 10.0, "time_range": moment("2015-03-31").twix("2015-12-31", {allDay: true})},
+        {"wage": 10.0, "time_range": moment("2015-04-01").twix("2015-12-31", {allDay: true})},
         {"wage": 10.5, "time_range": moment("2016-01-01").twix("2016-12-31", {allDay: true})},
         {"wage": 11.0, "time_range": moment("2017-01-01").twix("2017-12-31", {allDay: true})},
         {"wage": 11.5, "time_range": moment("2018-01-01").twix("2018-12-31", {allDay: true})},
